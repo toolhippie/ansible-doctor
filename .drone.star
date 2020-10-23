@@ -135,7 +135,7 @@ def manifest(ctx):
 		],
 		'depends_on': [
 			'amd64',
-			'arm',
+			# 'arm',
 			'arm64',
 		],
 		'trigger': {
