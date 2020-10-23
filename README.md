@@ -6,7 +6,7 @@
 **All these images are used for various scriptings, it's possible that any of these tools are updated randomly**
 
 * [GitHub](https://github.com/toolhippie/ansible-doctor)
-* [Upstream](https://github.com/xoxys/ansible-doctor)
+* [Upstream](https://github.com/thegeeklab/ansible-doctor)
 
 
 ## Versions
