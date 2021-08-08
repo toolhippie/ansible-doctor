@@ -7,10 +7,7 @@ ENV ANSIBLE_FORCE_COLOR=true
 # renovate: datasource=pypi depName=ansible-doctor
 ENV ANSIBLE_DOCTOR_VERSION=0.3.1
 
-# RUN apk update && \
-#   apk upgrade && \
-#   pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
-#   rm -rf /var/cache/apk/*
-
-RUN pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
+RUN apk update && \
+  apk upgrade && \
+  pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
   rm -rf /var/cache/apk/*
