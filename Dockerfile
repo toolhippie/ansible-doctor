@@ -1,13 +1,16 @@
-FROM webhippie/python:latest
+FROM webhippie/python:3.7
 
-ENTRYPOINT [""]
+ENTRYPOINT ["/usr/bin/ansible-doctor"]
 ENV PY_COLORS=1
 ENV ANSIBLE_FORCE_COLOR=true
 
 # renovate: datasource=pypi depName=ansible-doctor
-ENV DOCTOR_VERSION=0.3.1
+ENV ANSIBLE_DOCTOR_VERSION=0.3.1
 
-RUN apk update && \
-  apk upgrade && \
-  pip3 install -U ansible-doctor==${DOCTOR_VERSION} && \
+# RUN apk update && \
+#   apk upgrade && \
+#   pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
+#   rm -rf /var/cache/apk/*
+
+RUN pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
   rm -rf /var/cache/apk/*
