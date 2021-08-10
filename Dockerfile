@@ -1,6 +1,5 @@
 FROM webhippie/python:3.7
-
-ENTRYPOINT ["/usr/bin/ansible-doctor"]
+ENTRYPOINT [""]
 ENV PY_COLORS=1
 ENV ANSIBLE_FORCE_COLOR=true
 
