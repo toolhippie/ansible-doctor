@@ -9,4 +9,4 @@ ENV ANSIBLE_DOCTOR_VERSION=0.3.3
 RUN apk update && \
   apk upgrade && \
   pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
-  rm -rf /var/cache/apk/*
+  rm -rf /var/cache/apk/* /root/.cache
