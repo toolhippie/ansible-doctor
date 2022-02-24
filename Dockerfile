@@ -8,6 +8,7 @@ ENV ANSIBLE_DOCTOR_VERSION=1.1.10
 
 RUN apk update && \
   apk upgrade && \
-  apk add python3 python3-dev py3-pip && \
+  apk add python3 python3-dev py3-pip build-base && \
   pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
+  apk del build-base && \
   rm -rf /var/cache/apk/* /root/.cache
