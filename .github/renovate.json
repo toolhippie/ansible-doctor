@@ -3,10 +3,12 @@
     "extends": [
         "github>webhippie/renovate:docker"
     ],
-    "packageRules": [{
-        "groupName": "ansible-doctor packages",
-        "matchDatasources": [
-            "pypi"
-        ]
-    }]
+    "packageRules": [
+        {
+            "groupName": "ansible-doctor packages",
+            "matchDatasources": [
+                "pypi"
+            ]
+        }
+    ]
 }
