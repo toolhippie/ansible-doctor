@@ -8,7 +8,7 @@ ENV ANSIBLE_DOCTOR_VERSION=3.1.2
 
 RUN apk update && \
   apk upgrade && \
-  apk add python3 python3-dev py3-pip build-base cargo libffi-dev && \
+  apk add python3 python3-dev py3-pip build-base cargo libffi-dev openssl-dev && \
   pip3 install -U ansible-doctor==${ANSIBLE_DOCTOR_VERSION} && \
-  apk del build-base cargo libffi-dev && \
+  apk del build-base cargo libffi-dev openssl-dev && \
   rm -rf /var/cache/apk/* /root/.cache
