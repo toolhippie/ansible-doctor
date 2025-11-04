@@ -4,7 +4,7 @@ ENV PY_COLORS=1
 ENV ANSIBLE_FORCE_COLOR=true
 
 # renovate: datasource=pypi depName=ansible-doctor
-ENV ANSIBLE_DOCTOR_VERSION=7.3.0
+ENV ANSIBLE_DOCTOR_VERSION=8.0.0
 
 RUN apk update && \
   apk upgrade && \
